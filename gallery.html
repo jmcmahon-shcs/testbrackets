@@ -1,0 +1,85 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <title> Photo Gallery - Tennis at St Hilda's</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+        <link href="styles/tennis_styles.css" rel=stylesheet type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+     <!-- This is information for the menu block and navigation section -->
+<body>
+    <div class="background_image"> <!-- This div is a placeholder for the background image --> 
+        <div class="titleblock">
+            <nav>
+                <ul>
+                    <li><a href=index.html> Home </a></li>
+                    <li><a href=details.html> Details </a></li>
+                    <li class="item_image"> <img src="images/resized/shcscrest.png" alt="St Hilda's Crest"/> </li>
+                    <li><a href=highlights.html> Highlights </a></li>
+                    <li><a href=gallery.html> Gallery </a></li>
+                </ul>
+            </nav>
+        
+            <h1> Tennis at St Hilda's </h1>
+        </div>
+    
+    
+            <div class="bottom-middle"> <h2> Gallery </h2> </div> <!-- This div lets me move the header around inside the main image div --> 
+    </div>
+    <br> 
+    
+<!-- The following code for an image gallery has been adapted from a w3 schools template -->
+    
+    <p> Some images from various events St Hilda's has competed in recently. <br> Click on the images for a bigger picture and description. </p>
+<!-- PAGE CONTENT -->
+<div class="img_gallery">
+
+  <!-- Photo grid -->
+  <div class="w3-row">
+    <div class="w3-third">
+      <img src="images/resized/tennis2.jpg" style="width:100%" onclick="onClick(this)" alt="A student playing at the Otago intermediate champs">
+      <img src="images/resized/tennis5.jpg" style="width:100%" onclick="onClick(this)" alt="Students playing doubles during a competition in the edgar center">
+      <img src="images/resized/tennis4.jpg" style="width:100%" onclick="onClick(this)" alt="A group of students at the edgar centre">
+    </div>
+
+    <div class="w3-third">
+      <img src="images/resized/tennis4.jpg" style="width:100%" onclick="onClick(this)" alt="A group of students at the edgar centre">
+      <img src="images/resized/tennis2.jpg" style="width:100%" onclick="onClick(this)" alt="A student playing at the Otago intermediate champs">
+      <img src="images/resized/tennis5.jpg" style="width:100%" onclick="onClick(this)" alt="Students playing doubles during a competition in the edgar center">
+    </div>
+    
+    <div class="w3-third">
+      <img src="images/resized/tennis5.jpg" style="width:100%" onclick="onClick(this)" alt="Students playing doubles during a competition in the edgar center">
+      <img src="images/resized/tennis4.jpg" style="width:100%" onclick="onClick(this)" alt="A group of students at the edgar centre">
+      <img src="images/resized/tennis2.jpg" style="width:100%" onclick="onClick(this)" alt="A student playing at the Otago intermediate champs">
+    </div>
+  </div>
+
+
+  
+  <!-- Modal for full size images on click (imported) -->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image"> <!-- This image is missing a src and alt attribute, but I cannot change it as I don't have the stylesheet and I don't want to affect the javascript code -->
+      <p id="caption"></p>
+    </div>
+  </div>
+    
+    <script>
+
+    // Modal Image Gallery
+    function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+    var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+    }
+    </script>
+
+    </div>
+    
+</body>
+</html>

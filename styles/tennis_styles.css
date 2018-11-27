@@ -1,0 +1,163 @@
+/* 
+Titles + Subtitles: Lato
+Text: Dosis
+font-family: 'Lato', sans-serif;
+font-family: 'Dosis', sans-serif;
+
+Colour pallette
+#5BB4DA #84C1DC #BDD9E7 
+(Canva colour pallete generator)
+Main Text Colour: #84C1DC
+Heading Colour: #5BB4DA  */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:bold|Dosis');
+
+/* The following are basic styles */
+body, html {
+    height: 100%;
+    width:50%;
+}
+
+body {
+    width: 90%;
+    margin: 2% 5% 0 5%;
+    font-family: 'Dosis', sans-serif; 
+    font-size: 2.5vw;
+    color: #84C1DC;
+    text-align: center; 
+}
+
+h1 {
+    font-family: 'Lato', sans-serif;  
+    width: 100%;
+    text-align: center;
+    font-size: 5.5vw;
+    color: #5BB4DA;  
+    margin-bottom: 5vw;
+}
+
+h2 {
+    font-family: 'Lato', sans-serif;
+    width:100%;
+    font-size: 4.5vw;
+    color: #5BB4DA;
+    text-transform: uppercase;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* The following styles apply to the titleblock div, which includes the nav menu and the  h1 title*/
+
+nav {
+    width: 90%;
+}
+
+nav li {
+    list-style-type: none;
+    float: left;
+    width: 18%;
+    text-align: center;
+    padding: 5vw 0 4vw 0;
+    margin-bottom: 6vw; /*This pushes the h1 title down and away from the nav bar */  
+    color: #5BB4DA;
+    font-size: 3vw;
+    margin-left: 0;
+}
+
+a {
+    color: #5BB4DA;
+    text-decoration: none;
+}
+
+a:hover, .email:hover { /*Changes when hovered over shows the user it is a clickable link. The email does not apply to this section, but has been included to save coding it again later*/
+    color: #84C1DC;
+    text-decoration: underline;
+}
+
+.item_image img {
+    width: 50%;
+}
+
+.item_image {
+    width:28%;
+    padding: 0;
+    margin: 0;
+}
+
+/* The following styles make the layout of the title/heading section, which appears at the top of every page */
+
+.titleblock {
+    position: absolute;
+    z-index: 2;
+    width:90%;
+    background-color: rgba(189,217,231,0.9); /* This creates the opacity, the colour is #BDD9E7*/
+    text-align: center;
+}
+
+.bottom-middle {
+    position: absolute;
+    bottom: 25%; 
+    text-align: center;
+    left: 34%;
+    width: 30%; /* These add up to 50, which makes it look centered. If they add up to 50 they look too far off, because the crest is not exactly centered in it's image sizing. */
+    z-index: 1;
+}
+
+.background_image {
+    background-image: url(../images/resized/tennis1.jpg);
+    height:75vh;
+    margin: 0;
+    z-index: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 3%;
+}
+
+/* The following are miscellaneous styles for various elements */
+
+.det { /* Having this border seperates the information on the details page */
+    padding-bottom: 3vw;
+    border-bottom: 1px dashed #BDD9E7;
+}
+
+.highlights {
+    float: none;
+    list-style-type: circle;
+    margin: 0 0 2vw 0;
+    padding: 0px;
+    width: 60%;
+    text-align: left;
+    color: #84C1DC;
+    font-size: 2.5vw;
+}
+
+.home_img {
+    float: left;
+    width: 48%;
+    margin: 0 1% 4% 1%;
+}
+
+/* The following styles are for the image gallery */
+
+.img_gallery {
+    width:100%;
+    margin-bottom: 4vw;
+}
+
+ /* These styles are from the w3 schools template */
+.w3-quarter img {
+    margin-bottom: -6px; 
+    cursor: pointer;
+}
+
+.w3-quarter img:hover {
+    opacity: 0.6; 
+    transition: 0.3s;
+}
+
+
+
